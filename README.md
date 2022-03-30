@@ -1,27 +1,23 @@
-# Data-Analyst-Nano-Degree (Investigate a movie database set)
-# Quality of Analysis
-Do popularity ratings of movies based on High Budget/High Revenue/High Vote Count?
-What kinds of properties are associated with movies that have high revenues?
-How various characteristics of th movies changed over time?
-how various characteristics varies for high budget and hig hrevenue movies?The project investigates the stated question(s) from multiple angles.
-# Data Wrangling Phase
-Identified missing and duplicated data
-Identified data that requires wrangling to be useful in your analysis (genres and production_companies, etc) and/or would bias your analysis
-# Exploration Phase
-The project explores at least three variables in relation to the primary question. This can be an exploratory relationship between three variables of interest, or looking at how two independent variables relate to a single dependent variable of interest.
-The project performs both single-variable (1d) and multiple-variable (2d) explorations.
-The project's visualizations are varied and show multiple comparisons and trends.
-At least two kinds of plots should be created as part of the explorations.
-Relevant statistics are computed throughout the analysis when an inference is made about the data.
-# Conclusions Phase
-The Conclusions have reflected on the steps taken during the data exploration.
-The Conclusions have summarized the main findings in relation to the question(s) provided at the beginning of the analysis accurately.
-The project has pointed out where additional research can be done or where additional information could be useful.
-The conclusion should have at least 1 limitation explained clearly.
-The analysis does not state or imply that one change causes another based solely on a correlation.
-# Communication
-The code should have ideally the following sections: Introduction; Questions; Data Wrangling; Exploratory Data Analysis; Conclusions, Limitation.
-Reasoning is provided for each analysis decision, plot, and statistical summary.
-Interpretation of plots and application of statistical tests should be correct and without error.
-Comments are used within the code cells.
-Documented the flow of analysis in the mark-down cells.
+# Ford GoBike System Data
+## by Jyothirmai Srinathu
+
+
+## Dataset
+
+> There are 174952 data points in teh data sen after data wrangling! Earler before cleaning the number of data points wer 183412. There are 16 features (duration_sec,start_time,end_time,start_station_id,end_station_id,start_station_name,end_sattion_name,start+_station_latitude and longitude,end_sation_latitude and longitude,bike_id,user_type,member_birth_uyear,member_gender,bike_share_for_all_trip. There are fetures wit hcategories,numeric also.
+> When are most trips taken in terms of time of day, day of the week, or month of the year?
+> How long does the average trip take?
+> Does the above depend on if a user is a subscriber or customer?
+I think the start and end_time, duration helps investigating th emost trips taken in a year and also the avergae trip taken and alos user type dependency alos imapcts the above!
+
+
+## Summary of Findings
+
+> >The max duration of the trip ranges from 250 seconds to 2000 seconds in most cases. Riders are mostly male customers and willing to starts their ride usually around 11pm to 5pm and ends around 6pm. Most busys days are mondays and sundays than other days.Most busy days in the month are after 20th or before 5th of each month. Female customers are willing to ride long trips than others.Surprisingly, no body willing to share rides almost evry body. Interestingly, risers willing to share riding early mornings and late nights. Its may be due to the non availability of the transportation.
+
+
+## Key Insights for Presentation
+
+> > It was found that the duration variable is too high at one end!For analysis purpose I made log transformation.>Duration_sec has the long distribution 0 to 8000 sec few distribution on the long duration end. When plotted on a log scale, the duratio ndistribution roughly looks unimodal and the peak between 500 and 1000. secs duration The secong highest peak occurs at 500 sec duration and below 500 secs duration ,the third peak occurs.its a right skewed.After 1000 seconds duartion the steep lowrers and find low peak in between 10000 and 20000 duration.I haveny found any unusla variables in categorical varibales like member_gender and user_type data. They were quite normal.
+
+>When looking at the member _birth year it was found that unsual year of birth appears in the data outliers and for safety purpose I have removed those outleirs from the data. Also, the duration_sec for the outliers were above 75% that means above the third quartile range. For safety purpose, I have removed those data points from the original data.
